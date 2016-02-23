@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="653.4404907226562" minWidth="1027.059326171875" prefHeight="654.0" prefWidth="1028.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxcontroller.ProjectController">
+  <children>
+    <ImageView fitHeight="653.4404907226562" fitWidth="1382.8629150390625" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../other/project.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnHome" layoutX="30.0" layoutY="99.0" mnemonicParsing="false" onAction="#moveToHome" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnProject" layoutX="128.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToAccount" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnChallenge" layoutX="359.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToChallenge" opacity="0.0" prefHeight="33.0" prefWidth="99.0" text="Button" />
+    <Button id="btnCategory" layoutX="470.0" layoutY="97.0" mnemonicParsing="false" onAction="#moveToCategory" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="Button" />
+    <Button id="btnStat" layoutX="576.0" layoutY="98.0" mnemonicParsing="false" onAction="#moveToStatistic" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <Pane layoutX="96.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="827.0" styleClass="background">
+      <children>
+        <TableView fx:id="table" layoutX="1.0" layoutY="48.0" prefHeight="347.0" prefWidth="430.0" />
+        <Label layoutX="440.0" layoutY="32.0" styleClass="label-header" text="Projects Details" />
+        <HBox layoutX="445.0" layoutY="459.0" prefHeight="33.0" prefWidth="331.0" spacing="5.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#handleRefrech" prefHeight="33.0" prefWidth="113.0" text="Refrech..." />
+            <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="33.0" prefWidth="101.0" text="Delete..." />
+            <Button mnemonicParsing="false" onAction="#blockProject" prefHeight="33.0" prefWidth="107.0" text="Validate/Unvalidate" />
+          </children>
+        </HBox>
+        <GridPane layoutX="445.0" layoutY="97.0" prefHeight="322.0" prefWidth="367.0">
+          <children>
+            <Label prefHeight="22.0" prefWidth="129.0" text="Description" GridPane.rowIndex="1" />
+            <Label prefHeight="22.0" prefWidth="129.0" text="Title" GridPane.rowIndex="0" />
+            <Label fx:id="Label3" prefHeight="42.0" prefWidth="131.0" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <font>
+                <Font size="20.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label fx:id="Label2" font="$x1" prefHeight="22.0" prefWidth="131.0" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="22.0" prefWidth="129.0" text="Creation Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label fx:id="Label4" font="$x1" prefHeight="42.0" prefWidth="131.0" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="26.0" prefWidth="129.0" text="Deadline" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="Label1" font="$x1" prefHeight="42.0" prefWidth="131.0" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Validation Status" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label fx:id="labelStatus" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <MenuBar layoutX="-2.0" layoutY="-1.0" minHeight="26.0" prefHeight="26.0" prefWidth="827.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save To XML">
+                  <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                  </accelerator>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <GridPane layoutX="33.0" layoutY="449.0" prefHeight="52.0" prefWidth="269.0">
+          <children>
+            <TextField fx:id="title" prefHeight="37.0" prefWidth="137.0">
+              <stylesheets>
+                <URL value="@../other/DarkTheme.css" />
+              </stylesheets>
+            </TextField>
+            <Button defaultButton="false" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="102.0" text="Search" GridPane.columnIndex="1">
+              <stylesheets>
+                <URL value="@../other/DarkTheme.css" />
+              </stylesheets>
+            </Button>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="79.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <stylesheets>
+            <URL value="@../other/DarkTheme.css" />
+          </stylesheets>
+        </GridPane>
+      </children>
+      <stylesheets>
+            <URL value="@../other/DarkTheme.css" />
+          </stylesheets>
+    </Pane>
+  </children>
+</AnchorPane>

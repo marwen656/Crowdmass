@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="654.0" prefWidth="1028.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxcontroller.AnalyseSolutionController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ImageView fitHeight="654.7130516601537" fitWidth="1029.0594833490468" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../other/chalenges.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnHome" layoutX="-484.0" layoutY="-228.0" mnemonicParsing="false" onAction="#moveToHome" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnProject" layoutX="-386.0" layoutY="-226.0" mnemonicParsing="false" onAction="#moveToAccount" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnChallenge" layoutX="-282.0" layoutY="-226.0" mnemonicParsing="false" onAction="#moveToProject" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <Button id="btnCategory" layoutX="-42.0" layoutY="-230.0" mnemonicParsing="false" onAction="#moveToCategory" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="Button" />
+    <Button id="btnStat" layoutX="62.0" layoutY="-229.0" mnemonicParsing="false" onAction="#moveToStatistic" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <Pane layoutX="89.0" layoutY="159.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.71307373046875" prefWidth="608.0" styleClass="background">
+      <children>
+        <Label layoutX="304.0" layoutY="14.0" styleClass="label-header" text="Analysis details" />
+        <HBox layoutX="304.0" layoutY="420.0" spacing="5.0">
+          <children>
+            <Button id="backsolution" blendMode="HARD_LIGHT" mnemonicParsing="false" onAction="#backSolution" prefHeight="33.0" prefWidth="108.0" text="Back" />
+          </children>
+        </HBox>
+        <TextArea fx:id="resultat" blendMode="SOFT_LIGHT" layoutX="40.0" layoutY="77.0" prefHeight="311.0" prefWidth="264.0" styleClass="text-field" wrapText="true" />
+        <Label layoutX="348.0" layoutY="127.0" prefHeight="43.0" prefWidth="128.0" text="Challenge ID">
+          <font>
+            <Font size="21.0" />
+          </font>
+        </Label>
+        <Label id="firstLabel" fx:id="id" layoutX="466.0" layoutY="127.0" prefHeight="39.0" prefWidth="131.0" styleClass="label-bright">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+      </children>
+      <stylesheets>
+        <URL value="@../other/DarkTheme.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+</AnchorPane>

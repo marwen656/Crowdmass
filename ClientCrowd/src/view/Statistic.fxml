@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="653.4404907226562" minWidth="1027.059326171875" prefHeight="654.0" prefWidth="1028.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxcontroller.StatisticController">
+  <children>
+    <ImageView fitHeight="653.4404907226562" fitWidth="1382.8629150390625" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../other/stat.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnHome" layoutX="30.0" layoutY="99.0" mnemonicParsing="false" onAction="#moveToHome" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnProject" layoutX="128.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToAccount" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnChallenge" layoutX="323.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToChallenge" opacity="0.0" prefHeight="33.0" prefWidth="99.0" text="Button" />
+    <Button id="btnCategory" layoutX="227.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToProject" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="Button" />
+    <Button id="btnStat" layoutX="444.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToCategory" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <TabPane cache="false" focusTraversable="true" layoutX="81.0" layoutY="164.0" prefHeight="459.0" prefWidth="861.0" tabClosingPolicy="ALL_TABS">
+      <stylesheets>
+        <URL value="@../other/DarkTheme.css" />
+      </stylesheets>
+      <tabs>
+        <Tab fx:id="onglet1" text="Type of Crowd">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <PieChart id="PieChart" fx:id="piechart" layoutX="199.0" layoutY="14.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Type of project">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <PieChart id="PieChart" fx:id="piechart2" layoutX="201.0" layoutY="14.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

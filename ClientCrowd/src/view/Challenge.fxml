@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="653.4404907226562" minWidth="1027.059326171875" prefHeight="654.0" prefWidth="1028.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxcontroller.ChallengeController">
+  <children>
+    <ImageView fitHeight="653.4404907226562" fitWidth="1382.8629150390625" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../other/chalenges.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnHome" layoutX="30.0" layoutY="99.0" mnemonicParsing="false" onAction="#moveToHome" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnProject" layoutX="128.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToAccount" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnChallenge" layoutX="232.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToProject" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <Button id="btnCategory" layoutX="472.0" layoutY="97.0" mnemonicParsing="false" onAction="#moveToCategory" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="Button" />
+    <Button id="btnStat" layoutX="576.0" layoutY="98.0" mnemonicParsing="false" onAction="#moveToStatistic" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <AnchorPane id="AnchorPane" layoutX="106.0" layoutY="134.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="800.0" styleClass="theme">
+      <children>
+        <SplitPane id="splitPaneHorizontal1" dividerPositions="" focusTraversable="true" prefHeight="535.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+          <items>
+            <AnchorPane id="anchorPane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <SplitPane id="splitPaneVertical1" dividerPositions="" focusTraversable="true" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="535.0" prefWidth="800.0">
+                  <items>
+                    <AnchorPane id="anchorPane3" minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="800.0" styleClass="background">
+                      <children>
+                        <TableView fx:id="table" prefHeight="383.0" prefWidth="408.5" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="-0.5" AnchorPane.rightAnchor="392.0" AnchorPane.topAnchor="7.0" />
+                        <AnchorPane id="anchorPane4" layoutX="294.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="245.0" prefWidth="800.0" styleClass="background">
+                          <children>
+                            <GridPane id="GridPane" layoutX="253.0" layoutY="22.0" prefHeight="151.0" prefWidth="209.0">
+                              <children>
+                                <Label fx:id="title" prefWidth="69.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                  <stylesheets>
+                                    <URL value="@../other/DarkTheme.css" />
+                                  </stylesheets>
+                                </Label>
+                                <Label fx:id="datecreation" prefHeight="22.0" prefWidth="66.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Label fx:id="deadline" prefHeight="29.0" prefWidth="108.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                  <stylesheets>
+                                    <URL value="@../other/DarkTheme.css" />
+                                  </stylesheets>
+                                </Label>
+                                <Label fx:id="Status" prefWidth="97.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                                <Label fx:id="description" prefWidth="77.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                  <stylesheets>
+                                    <URL value="@../other/DarkTheme.css" />
+                                  </stylesheets>
+                                </Label>
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                            <Label id="l1" layoutX="166.0" layoutY="35.0" text="Title" />
+                            <Label id="l2" layoutX="163.0" layoutY="57.0" prefWidth="76.0" text="Description" />
+                            <Label id="l3" layoutX="159.0" layoutY="87.0" text="Creation Date" />
+                            <Label id="l4" layoutX="162.0" layoutY="118.0" prefWidth="76.0" text="DeadLine" />
+                            <Label id="l5" layoutX="162.0" layoutY="145.0" prefWidth="66.0" text="status" />
+                            <GridPane id="GridPane" cache="true" layoutY="184.0" prefWidth="214.0" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="427.0">
+                              <children>
+                                <Label id="id" prefWidth="58.000099999997474" text="Challenge:Id" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label fx:id="text" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                              </children>
+                              <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                            </GridPane>
+                          </children>
+                          <stylesheets>
+                            <URL value="@../other/DarkTheme.css" />
+                          </stylesheets>
+                        </AnchorPane>
+                        <GridPane layoutX="481.0" layoutY="355.0" prefHeight="52.0" prefWidth="269.0">
+                          <children>
+                            <TextField id="title" fx:id="title1" prefHeight="29.0" prefWidth="172.0">
+                              <stylesheets>
+                                <URL value="@../other/DarkTheme.css" />
+                              </stylesheets>
+                            </TextField>
+                            <Button defaultButton="false" mnemonicParsing="false" onAction="#handleOk" prefHeight="33.0" prefWidth="102.0" text="Search" GridPane.columnIndex="1">
+                              <stylesheets>
+                                <URL value="@../other/DarkTheme.css" />
+                              </stylesheets>
+                            </Button>
+                          </children>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="153.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="79.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                          <stylesheets>
+                            <URL value="@../other/DarkTheme.css" />
+                          </stylesheets>
+                        </GridPane>
+                      </children>
+                      <stylesheets>
+                        <URL value="@../other/DarkTheme.css" />
+                      </stylesheets>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER" spacing="15.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="22.0">
+          <children>
+            <Button id="button1" onAction="#updateChallenge" text="validate" />
+            <Button id="button1" onAction="#moreChallenge" prefWidth="84.0" text="More" />
+            <Button id="button1" onAction="#lockChallenge" prefWidth="90.0" text="Lock" />
+          </children>
+        </HBox>
+        <Button id="refresh" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#refresh" prefWidth="84.0" text="refresh" />
+      </children>
+      <stylesheets>
+        <URL value="@../other/DarkTheme.css" />
+      </stylesheets>
+    </AnchorPane>
+  </children>
+</AnchorPane>
