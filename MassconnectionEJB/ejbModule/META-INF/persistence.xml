@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="MassconnectionEJB">
+	<jta-data-source>java:jboss/datasources/testt</jta-data-source>
+		<class>tn.esprit.pidev.massconnection.entities.Administrator</class>
+		<class>tn.esprit.pidev.massconnection.entities.Category</class>
+		<class>tn.esprit.pidev.massconnection.entities.Challenge</class>
+		<class>tn.esprit.pidev.massconnection.entities.Crowd</class>
+		<class>tn.esprit.pidev.massconnection.entities.Details</class>
+		<class>tn.esprit.pidev.massconnection.entities.Feedback</class>
+		<class>tn.esprit.pidev.massconnection.entities.Funds</class>
+		<class>tn.esprit.pidev.massconnection.entities.FundsPK</class>
+		<class>tn.esprit.pidev.massconnection.entities.Message</class>
+		<class>tn.esprit.pidev.massconnection.entities.Notification</class>
+		<class>tn.esprit.pidev.massconnection.entities.Participation</class>
+		<class>tn.esprit.pidev.massconnection.entities.ParticipationPK</class>
+		<class>tn.esprit.pidev.massconnection.entities.Project</class>
+		<class>tn.esprit.pidev.massconnection.entities.Solution</class>
+		<class>tn.esprit.pidev.massconnection.entities.User</class>
+		
+	</persistence-unit>
+</persistence>
