@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" minHeight="653.4404907226562" minWidth="1027.059326171875" prefHeight="654.0" prefWidth="1028.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="fxcontroller.SolutionController">
+  <children>
+    <ImageView fitHeight="653.4404907226562" fitWidth="1382.8629150390625" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../other/chalenges.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnHome" layoutX="30.0" layoutY="99.0" mnemonicParsing="false" onAction="#moveToHome" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnProject" layoutX="128.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToAccount" opacity="0.0" prefHeight="33.0" prefWidth="90.0" text="Button" />
+    <Button id="btnChallenge" layoutX="232.0" layoutY="101.0" mnemonicParsing="false" onAction="#moveToProject" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <Button id="btnCategory" layoutX="472.0" layoutY="97.0" mnemonicParsing="false" onAction="#moveToCategory" opacity="0.0" prefHeight="33.0" prefWidth="87.0" text="Button" />
+    <Button id="btnStat" layoutX="576.0" layoutY="98.0" mnemonicParsing="false" onAction="#moveToStatistic" opacity="0.0" prefHeight="33.0" prefWidth="77.0" text="Button" />
+    <AnchorPane id="AnchorPane" layoutX="114.0" layoutY="134.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.44049072265625" prefWidth="800.0" styleClass="theme">
+      <children>
+        <SplitPane id="splitPaneHorizontal1" dividerPositions="" focusTraversable="true" prefHeight="535.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+          <items>
+            <AnchorPane id="anchorPane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <SplitPane id="splitPaneVertical1" dividerPositions="0.296127562642369" focusTraversable="true" orientation="VERTICAL" prefHeight="598.0" prefWidth="595.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <AnchorPane id="anchorPane3" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <children>
+                        <TableView id="tableView1" fx:id="table" prefHeight="206.0" prefWidth="593.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane id="anchorPane4" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background">
+                      <children>
+                        <TextArea id="textArea1" fx:id="descriptionValue" blendMode="LIGHTEN" editable="false" prefHeight="222.0" prefWidth="786.0" text="" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="64.0">
+                          <effect>
+                            <Glow />
+                          </effect>
+                          <stylesheets>
+                            <URL value="@../other/DarkTheme.css" />
+                          </stylesheets>
+                        </TextArea>
+                        <Label id="label2" layoutX="20.0" layoutY="49.0" text="DESCRIPTION:" />
+                        <HBox id="HBox" alignment="CENTER" layoutY="14.0" minHeight="12.0" prefHeight="25.0" prefWidth="245.0" spacing="5.0" AnchorPane.leftAnchor="361.0" AnchorPane.rightAnchor="194.0">
+                          <children>
+                            <Label id="label4" minWidth="-Infinity" text="Solution/ID" />
+                            <TextField id="textField1" fx:id="text" editable="false" prefHeight="25.0" prefWidth="101.0" text="" HBox.hgrow="ALWAYS">
+                              <stylesheets>
+                                <URL value="@../other/DarkTheme.css" />
+                              </stylesheets>
+                            </TextField>
+                          </children>
+                        </HBox>
+                      </children>
+                      <stylesheets>
+                        <URL value="@../other/DarkTheme.css" />
+                      </stylesheets>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER" spacing="15.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="22.0">
+          <children>
+            <Button id="button1" onAction="#analayse" text="Analyse" />
+            <Button id="button1" onAction="#deletedSolution" text="Delete" />
+          </children>
+        </HBox>
+        <Button id="button1" layoutX="14.0" layoutY="22.0" onAction="#back" text="Back" />
+      </children>
+      <stylesheets>
+        <URL value="@../other/DarkTheme.css" />
+      </stylesheets>
+    </AnchorPane>
+  </children>
+</AnchorPane>

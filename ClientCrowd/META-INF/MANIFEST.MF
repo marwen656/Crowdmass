@@ -1,0 +1,52 @@
+Manifest-Version: 1.0
+Implementation-Vendor: demo
+JavaFX-Version: 2.2
+Implementation-Title: FXML-LoginDemo
+Implementation-Version: 1.0
+JavaFX-Application-Class: demo.Main
+JavaFX-Class-Path: 
+Created-By: JavaFX Packager
+Main-Class: com/javafx/main/Main
+
+Name: demo/Login.fxml
+SHA1-Digest: qgaTcdMTbZd3GFlwx0/HoKZZRHw=
+
+Name: com/javafx/main/Main.class
+SHA1-Digest: IqHu4+2yiLFM8X9Zups3VuGt2xM=
+
+Name: demo/LoginLogo.png
+SHA1-Digest: bWL13XDX+VsrC0K5pgZh08W7vdk=
+
+Name: demo/Profile.fxml
+SHA1-Digest: dR8mkH6SFqGKKnm+EgFfT225vuY=
+
+Name: demo/model/User.class
+SHA1-Digest: rRmztc1hAz0DZZhiUKQTLKWqDqQ=
+
+Name: com/javafx/main/Main$2.class
+SHA1-Digest: HaTAMumb3Z9GtCgFLYnN5SGybhc=
+
+Name: com/javafx/main/NoJavaFXFallback.class
+SHA1-Digest: 9DpUVs5xbEbkmRqfVFgJv9GpTO0=
+
+Name: demo/Login.css
+SHA1-Digest: Dnmp6SclcwTqsnLgO9vj9t81Ku0=
+
+Name: demo/security/Authenticator.class
+SHA1-Digest: QAsI4CCSj93OEZonMsRhYuxZiy4=
+
+Name: demo/LoginController.class
+SHA1-Digest: LqSnRN7KV/+sRK2RgdGjGE6L1tI=
+
+Name: demo/Main.class
+SHA1-Digest: 2Lb7BKs8s4FmIhA3XWy5m0W9DUE=
+
+Name: com/javafx/main/Main$1.class
+SHA1-Digest: DBQixJwr+pnlU4pj5K2v5Xxhx/c=
+
+Name: demo/ProfileController.class
+SHA1-Digest: tB0lBJdM9LqwWfcrd4rcwb17dYc=
+
+Name: demo/CoarseGrid.png
+SHA1-Digest: gnG7onVE+PwjVXXN7LW0t0pwuus=
+
